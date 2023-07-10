@@ -15,8 +15,9 @@ build:
 
 outputs:
   - name: allure-python-commons
-    noarch: python
-    script: install.sh
+    build:
+      noarch: python
+      script: install.sh
     requirements:
       host:
         - pip
@@ -31,8 +32,9 @@ outputs:
         - allure
         - allure_commons
   - name: allure-behave
-    noarch: python
-    script: install.sh
+    build:
+      noarch: python
+      script: install.sh
     requirements:
       host:
         - pip
@@ -46,8 +48,9 @@ outputs:
       imports:
         - allure_behave
   - name: allure-nose2
-    noarch: python
-    script: install.sh
+    build:
+      noarch: python
+      script: install.sh
     requirements:
       host:
         - pip
@@ -61,8 +64,9 @@ outputs:
       imports:
         - allure_nose2
   - name: allure-pytest
-    noarch: python
-    script: install.sh
+    build:
+      noarch: python
+      script: install.sh
     requirements:
       host:
         - pip
@@ -76,8 +80,9 @@ outputs:
       imports:
         - allure_pytest
   - name: allure-pytest-bdd
-    noarch: python
-    script: install.sh
+    build:
+      noarch: python
+      script: install.sh
     requirements:
       host:
         - pip
@@ -92,8 +97,9 @@ outputs:
       imports:
         - allure_pytest_bdd
   - name: allure-robotframework
-    noarch: python
-    script: install.sh
+    build:
+      noarch: python
+      script: install.sh
     requirements:
       host:
         - pip
