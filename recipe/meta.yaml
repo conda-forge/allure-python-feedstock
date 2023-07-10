@@ -11,7 +11,7 @@ source:
   sha256: 9db4db2133a52e48af043fbb3bb920a77886f64a6a1c8cd56adee41828487fc6
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: allure-python-commons
