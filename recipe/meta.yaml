@@ -11,12 +11,12 @@ source:
   sha256: 9db4db2133a52e48af043fbb3bb920a77886f64a6a1c8cd56adee41828487fc6
 
 build:
-  noarch: python
-  number: 0
+  number: 1
 
 outputs:
   - name: allure-python-commons
-    script: install.sh
+    build:
+      noarch: python
     requirements:
       host:
         - pip
@@ -26,12 +26,14 @@ outputs:
         - python >=3.6
         - attrs >=16.0.0
         - pluggy >=0.4.0
+    script: install.sh
     test:
       imports:
         - allure
         - allure_commons
   - name: allure-behave
-    script: install.sh
+    build:
+      noarch: python
     requirements:
       host:
         - pip
@@ -41,11 +43,13 @@ outputs:
         - python >=3.6
         - behave >=1.2.5
         - {{ pin_subpackage('allure-python-commons', exact=True) }}
+    script: install.sh
     test:
       imports:
         - allure_behave
   - name: allure-nose2
-    script: install.sh
+    build:
+      noarch: python
     requirements:
       host:
         - pip
@@ -55,11 +59,13 @@ outputs:
         - python >=3.6
         - nose2
         - {{ pin_subpackage('allure-python-commons', exact=True) }}
+    script: install.sh
     test:
       imports:
         - allure_nose2
   - name: allure-pytest
-    script: install.sh
+    build:
+      noarch: python
     requirements:
       host:
         - pip
@@ -69,11 +75,13 @@ outputs:
         - python >=3.6
         - pytest >=4.5.0
         - {{ pin_subpackage('allure-python-commons', exact=True) }}
+    script: install.sh
     test:
       imports:
         - allure_pytest
   - name: allure-pytest-bdd
-    script: install.sh
+    build:
+      noarch: python
     requirements:
       host:
         - pip
@@ -84,11 +92,13 @@ outputs:
         - pytest >=4.5.0
         - pytest-bdd >=3.0.0
         - {{ pin_subpackage('allure-python-commons', exact=True) }}
+    script: install.sh
     test:
       imports:
         - allure_pytest_bdd
   - name: allure-robotframework
-    script: install.sh
+    build:
+      noarch: python
     requirements:
       host:
         - pip
@@ -98,6 +108,7 @@ outputs:
         - python >=3.6
         - robotframework
         - {{ pin_subpackage('allure-python-commons', exact=True) }}
+    script: install.sh
     test:
       imports:
         - AllureLibrary
