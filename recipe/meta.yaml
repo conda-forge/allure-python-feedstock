@@ -11,7 +11,7 @@ source:
   sha256: efb2aef34d81a56fc3229f0e637d3e1a272ff97803761a802530d187f304562e
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: allure-python-commons
@@ -20,14 +20,17 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.6
+        - python {{ python_min }}
+        - setuptools
         - setuptools-scm
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - attrs >=16.0.0
         - pluggy >=0.4.0
     script: install.sh
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - allure
         - allure_commons
@@ -37,14 +40,17 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.6
+        - python {{ python_min }}
+        - setuptools
         - setuptools-scm
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - behave >=1.2.5
         - {{ pin_subpackage('allure-python-commons', exact=True) }}
     script: install.sh
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - allure_behave
   - name: allure-nose2
@@ -53,14 +59,17 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.6
+        - python {{ python_min }}
+        - setuptools
         - setuptools-scm
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - nose2
         - {{ pin_subpackage('allure-python-commons', exact=True) }}
     script: install.sh
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - allure_nose2
   - name: allure-pytest
@@ -69,14 +78,17 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.6
+        - python {{ python_min }}
+        - setuptools
         - setuptools-scm
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - pytest >=4.5.0
         - {{ pin_subpackage('allure-python-commons', exact=True) }}
     script: install.sh
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - allure_pytest
   - name: allure-pytest-bdd
@@ -85,15 +97,18 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.6
+        - python {{ python_min }}
+        - setuptools
         - setuptools-scm
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - pytest >=4.5.0
         - pytest-bdd >=3.0.0
         - {{ pin_subpackage('allure-python-commons', exact=True) }}
     script: install.sh
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - allure_pytest_bdd
   - name: allure-robotframework
@@ -102,14 +117,17 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.6
+        - python {{ python_min }}
+        - setuptools
         - setuptools-scm
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - robotframework
         - {{ pin_subpackage('allure-python-commons', exact=True) }}
     script: install.sh
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - AllureLibrary
         - allure_robotframework
