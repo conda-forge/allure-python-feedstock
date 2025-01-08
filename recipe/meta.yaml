@@ -21,6 +21,7 @@ outputs:
       host:
         - pip
         - python {{ python_min }}
+        - setuptools
         - setuptools-scm
       run:
         - python >={{ python_min }}
@@ -40,6 +41,7 @@ outputs:
       host:
         - pip
         - python {{ python_min }}
+        - setuptools
         - setuptools-scm
       run:
         - python >={{ python_min }}
@@ -58,6 +60,7 @@ outputs:
       host:
         - pip
         - python {{ python_min }}
+        - setuptools
         - setuptools-scm
       run:
         - python >={{ python_min }}
@@ -76,6 +79,7 @@ outputs:
       host:
         - pip
         - python {{ python_min }}
+        - setuptools
         - setuptools-scm
       run:
         - python >={{ python_min }}
@@ -94,6 +98,7 @@ outputs:
       host:
         - pip
         - python {{ python_min }}
+        - setuptools
         - setuptools-scm
       run:
         - python >={{ python_min }}
@@ -113,6 +118,7 @@ outputs:
       host:
         - pip
         - python {{ python_min }}
+        - setuptools
         - setuptools-scm
       run:
         - python >={{ python_min }}
