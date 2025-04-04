@@ -1,5 +1,5 @@
 {% set name = "allure-python" %}
-{% set version = "2.13.5" %}
+{% set version = "2.14.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://github.com/allure-framework/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: efb2aef34d81a56fc3229f0e637d3e1a272ff97803761a802530d187f304562e
+  sha256: 17af5ba84834015f6f0f0929277aa41d0a9760c9ed29b0506f3810f7fe23bb30
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: allure-python-commons
@@ -103,7 +103,7 @@ outputs:
       run:
         - python >={{ python_min }}
         - pytest >=4.5.0
-        - pytest-bdd >=3.0.0
+        - pytest-bdd >=5.0.0
         - {{ pin_subpackage('allure-python-commons', exact=True) }}
     script: install.sh
     test:
