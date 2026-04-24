@@ -1,5 +1,5 @@
 {% set name = "allure-python" %}
-{% set version = "2.15.3" %}
+{% set version = "2.16.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/allure-framework/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: e25166a57ca34c762c85d5f0b07efdd9bb527c1cde5bb605841e4baad35435ec
+  sha256: 9abc3da20209a89d082fc5f7bd197f5ef7438c2f88a3a4012918ffe6c48e98c4
 
 build:
   number: 0
